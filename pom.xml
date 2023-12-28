@@ -12,18 +12,35 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.cnaworld.framework</groupId>
 	<artifactId>cnaworld-framework</artifactId>
-	<version>1.1.5</version>
+	<version>1.1.7</version>
 	<name>cnaworld-framework</name>
 	<description>cnaworld-framework</description>
 	<url>https://github.com/tntfyf/cnaworld-framework</url>
 	<packaging>pom</packaging>
 	<properties>
+		<!-- global -->
 		<java.version>1.8</java.version>
-		<cnaworld.framework.version>${version}</cnaworld.framework.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- 二方包版本 -->
+		<cnaworld.framework.version>${version}</cnaworld.framework.version>
+
+		<!-- 三方包版本 -->
+		<knife4j-openapi3-spring-boot-starter>4.2.0</knife4j-openapi3-spring-boot-starter>
+		<netty-all>4.1.89.Final</netty-all>
+		<cglib>3.3.0</cglib>
+		<expiringmap>0.5.10</expiringmap>
+		<redisson-spring-boot-starter>3.18.1</redisson-spring-boot-starter>
+		<fastjson>1.2.83</fastjson>
+		<swagger-annotations>2.2.9</swagger-annotations>
+		<mybatis-plus-boot-starter>3.5.2</mybatis-plus-boot-starter>
+		<mybatis-plus-generator>3.5.0</mybatis-plus-generator>
+		<velocity-engine-core>2.3</velocity-engine-core>
+
+		<!-- 测试 -->
 	</properties>
 
 	<licenses>
@@ -62,6 +79,7 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- 二方包开始 -->
 			<dependency>
             	<groupId>cn.cnaworld.framework</groupId>
             	<artifactId>mybatis-plus</artifactId>
@@ -96,13 +114,79 @@
 				<version>${cnaworld.framework.version}</version>
 				<scope>compile</scope>
 			</dependency>
-		
+			<!-- 二方包结束 -->
+
+			<!-- 三方包开始 -->
 			<!-- OpenAPI UI -->
 			<dependency>
 				<groupId>com.github.xiaoymin</groupId>
 				<artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
-				<version>4.2.0</version>
+				<version>${knife4j-openapi3-spring-boot-starter}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId>
+				<version>${netty-all}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>${cglib}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>net.jodah</groupId>
+				<artifactId>expiringmap</artifactId>
+				<version>${expiringmap}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.redisson</groupId>
+				<artifactId>redisson-spring-boot-starter</artifactId>
+				<version>${redisson-spring-boot-starter}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>io.swagger.core.v3</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger-annotations}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus-boot-starter}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-generator</artifactId>
+				<version>${mybatis-plus-generator}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>velocity-engine-core</artifactId>
+				<version>${velocity-engine-core}</version>
+				<scope>compile</scope>
+			</dependency>
+			<!-- 三方包结束 -->
 		</dependencies>
 	</dependencyManagement>
 
