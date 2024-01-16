@@ -6,13 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.cnaworld.framework</groupId>
 	<artifactId>cnaworld-framework</artifactId>
-	<version>1.1.7</version>
+	<version>1.1.8</version>
 	<name>cnaworld-framework</name>
 	<description>cnaworld-framework</description>
 	<url>https://github.com/tntfyf/cnaworld-framework</url>
